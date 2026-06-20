@@ -2,7 +2,7 @@ import streamlit as st
 from openai import OpenAI
 from duckduckgo_search import DDGS
 
-OPENAI_API_KEY = "YOUR_OPENAI_KEY_HERE"  # ENTER YOUR KEY HERE
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]  # ENTER YOUR KEY HERE
 client = OpenAI(api_key=OPENAI_API_KEY)  # LEAVE THIS LINE ALONE
 
 def web_search(query):
